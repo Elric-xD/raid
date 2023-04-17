@@ -1,3 +1,4 @@
+
 import sys
 import asyncio
 
@@ -21,32 +22,32 @@ SESSION5 = getenv('SESSION5', default=None)
 # ------------- CLIENTS -------------
 
 if SESSION1:
-    M1 = Client(SESSION1, api_id=25981592, api_hash="709f3c9d34d83873d3c7e76cdd75b866")
+    M1 = Client(SESSION1, api_id=23114790, api_hash="8c0fb2eb81c68f1c7026d787f3b8eda6")
 else:
     M1 = None
 
 if SESSION2:
-    M2 = Client(SESSION2, api_id=25981592, api_hash="709f3c9d34d83873d3c7e76cdd75b866")
+    M2 = Client(SESSION2, api_id=23114790, api_hash="8c0fb2eb81c68f1c7026d787f3b8eda6")
 else:
     M2 = None
 
 if SESSION3:
-    M3 = Client(SESSION3, api_id=25981592, api_hash="709f3c9d34d83873d3c7e76cdd75b866")
+    M3 = Client(SESSION3, api_id=23114790, api_hash="8c0fb2eb81c68f1c7026d787f3b8eda6")
 else:
     M3 = None
 
 if SESSION4:
-    M4 = Client(SESSION4, api_id=25981592, api_hash="709f3c9d34d83873d3c7e76cdd75b866")
+    M4 = Client(SESSION4, api_id=23114790, api_hash="8c0fb2eb81c68f1c7026d787f3b8eda6")
 else:
     M4 = None
 
 if SESSION5:
-    M5 = Client(SESSION5, api_id=25981592, api_hash="709f3c9d34d83873d3c7e76cdd75b866")
+    M5 = Client(SESSION5, api_id=23114790, api_hash="8c0fb2eb81c68f1c7026d787f3b8eda6")
 else:
     M5 = None
 
 
-ONE_WORDS = ["TERI", "MAA", "KI", "CHUT", "AJA", "TERI", "MAA", "KI", "CHUT", "FAAD", "DUNGA", "HIJDE", "TERA", "BAAP",
+ONE_WORDS = ["KYU", "RE", "RANDI", "TERIMAA", "AJA", "TERI", "MAA", "KI", "CHUT", "FAAD", "DUNGA", "HIJDE", "TERA", "BAAP",
            "HU", "KIDXX", "SPEED", "PAKAD", "BHEN KE LAUDE", "AA BETA", "AAGYA", "TERI", "MAA ", "CHODNE",
            "AB", "TERI ", "MAA", "CHUDEGI", "KUTTE", "KI", "TARAH", "BETA", "TERI", "MAA", "KE", "BHOSDE",
            "ME", "JBL", "KE", "SPEAKER", "DAAL", "KAR", "BASS", "BOOSTED", "SONG", "SUNUNGA", "PURI",
@@ -107,8 +108,8 @@ async def restart(_, __):
 # ADDING HANDLERS
 
 if M1:
-    M1.add_handler(MessageHandler(pyrone, filters.command(["T3RI", "L0L", "AJA", "AAJA", "START"], prefixes=None) & filters.me))
-    M1.add_handler(MessageHandler(restart, filters.command(["XD", "FARAR", "STOP", "FUCKED"], prefixes=None) & filters.me))
+    M1.add_handler(MessageHandler(pyrone, filters.command(["T3RI", "KIDZ", "KYURERANDI", "AAJA", "TERU"], prefixes=None) & filters.me))
+    M1.add_handler(MessageHandler(restart, filters.command(["GANDFATT", "FATTT", "CHII", "FARAR"], prefixes=None) & filters.me))
 
 if M2:
     M2.add_handler(MessageHandler(pyrone, filters.command(["T3RI", "L0L", "AJA", "AAJA", "START"], prefixes=None) & filters.me))
