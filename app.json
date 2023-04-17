@@ -1,0 +1,34 @@
+{
+    "name": "Pyrone",
+    "logo": "https://te.legra.ph/file/07d39b85c6cea32f15259.jpg",
+    "keywords": [
+      "telegram",
+      "bot",
+      "Altron"
+    ],
+      "buildpacks": [{
+      "url": "heroku/python"
+    }],
+    "env": {
+        "SESSION1": {
+            "value": "",
+            "required": true
+        },
+        "SESSION2": {
+            "value": "",
+            "required": false
+        },
+        "SESSION3": {
+            "value": "",
+            "required": false
+        },
+        "SESSION4": {
+            "value": "",
+            "required": false
+        },
+        "SESSION5": {
+            "value": "",
+            "required": false
+        }
+    }
+  }
