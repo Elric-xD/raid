@@ -21,31 +21,7 @@ SESSION5 = getenv('SESSION5', default=None)
 
 # ------------- CLIENTS -------------
 
-if SESSION1:
-    M1 = Client(SESSION1, api_id=23114790, api_hash="8c0fb2eb81c68f1c7026d787f3b8eda6")
-else:
-    M1 = None
-
-if SESSION2:
-    M2 = Client(SESSION2, api_id=23114790, api_hash="8c0fb2eb81c68f1c7026d787f3b8eda6")
-else:
-    M2 = None
-
-if SESSION3:
-    M3 = Client(SESSION3, api_id=23114790, api_hash="8c0fb2eb81c68f1c7026d787f3b8eda6")
-else:
-    M3 = None
-
-if SESSION4:
-    M4 = Client(SESSION4, api_id=23114790, api_hash="8c0fb2eb81c68f1c7026d787f3b8eda6")
-else:
-    M4 = None
-
-if SESSION5:
-    M5 = Client(SESSION5, api_id=23114790, api_hash="8c0fb2eb81c68f1c7026d787f3b8eda6")
-else:
-    M5 = None
-
+M1 = Client(SESSION1, api_id=23114790, api_hash="8c0fb2eb81c68f1c7026d787f3b8eda6")
 
 ONE_WORDS = ["KYU", "RE", "RANDI", "TERI", "MA", "K", "BHOSDA", "TERI", "BHN", "KI", "CHUT", "RAND", "KA", "BETA",
            "LODE", "SPED", "BDA", "BSDK", "DALLE", "GAND FATT", "GYA", "KYA 😂", "MAA ", "MT",
@@ -93,8 +69,8 @@ async def pyrone(client: Client, message: Message):
     
     try:
         for word in ONE_WORDS:
-            await client.send_chat_action(chat_id, "typing")
-            await client.send_message(chat_id, word, reply_to_message_id=ruser)
+            await M1.send_chat_action(chat_id, "typing")
+            await M1.send_message(chat_id, word, reply_to_message_id=ruser)
             await asyncio.sleep(0.1)
     except FloodWait:
         pass
@@ -107,48 +83,14 @@ async def restart(_, __):
 
 # ADDING HANDLERS
 
-if M1:
-    M1.add_handler(MessageHandler(pyrone, filters.command(["T3RI", "KIDZ", "KYURERANDI", "AAJA", "TERU"], prefixes=None) & filters.me))
-    M1.add_handler(MessageHandler(restart, filters.command(["GANDFATT", "FATTT", "CHII", "FARAR"], prefixes=None) & filters.me))
-
-if M2:
-    M2.add_handler(MessageHandler(pyrone, filters.command(["T3RI", "L0L", "AJA", "AAJA", "START"], prefixes=None) & filters.me))
-    M2.add_handler(MessageHandler(restart, filters.command(["XD", "FARAR", "STOP", "FUCKED"], prefixes=None) & filters.me))
-
-if M3:
-    M3.add_handler(MessageHandler(pyrone, filters.command(["T3RI", "L0L", "AJA", "AAJA", "START"], prefixes=None) & filters.me))
-    M3.add_handler(MessageHandler(restart, filters.command(["XD", "FARAR", "STOP", "FUCKED"], prefixes=None) & filters.me))
-
-if M4:
-    M4.add_handler(MessageHandler(pyrone, filters.command(["T3RI", "L0L", "AJA", "AAJA", "START"], prefixes=None) & filters.me))
-    M4.add_handler(MessageHandler(restart, filters.command(["XD", "FARAR", "STOP", "FUCKED"], prefixes=None) & filters.me))
-
-if M5:
-    M5.add_handler(MessageHandler(pyrone, filters.command(["T3RI", "L0L", "AJA", "AAJA", "START"], prefixes=None) & filters.me))
-    M5.add_handler(MessageHandler(restart, filters.command(["XD", "FARAR", "STOP", "FUCKED"], prefixes=None) & filters.me))
+M1.add_handler(MessageHandler(pyrone, filters.command(["T3RI", "KIDZ", "KYURERANDI", "AAJA", "TERU"], prefixes=None) & filters.me))
+M1.add_handler(MessageHandler(restart, filters.command(["GANDFATT", "FATTT", "CHII", "FARAR"], prefixes=None) & filters.me))
 
 
 # STARTING CLIENTS
 
-if M1:
-    M1.start()
-    M1.join_chat("TheVepeX")
+M1.start()
 
-if M2:
-    M2.start()
-    M2.join_chat("TheVepeX")
-
-if M3:
-    M3.start()
-    M3.join_chat("TheVepeX")
-
-if M4:
-    M4.start()
-    M4.join_chat("TheVepeX")
-
-if M5:
-    M5.start()
-    M5.join_chat("TheVepeX")
 
 print("Pyrone Started Successfully")
 
@@ -157,17 +99,4 @@ idle()
 
 # STOPPING CLIENTS
 
-if M1:
-    M1.stop()
-
-if M2:
-    M2.stop()
-
-if M3:
-    M3.stop()
-
-if M4:
-    M4.stop()
-
-if M5:
-    M5.stop()
+M1.stop()
