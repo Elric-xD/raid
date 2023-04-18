@@ -20,7 +20,7 @@ SESSION5 = getenv('SESSION5', default=None)
 
 
 # ------------- CLIENTS -------------
-M1 = Client(api_id=23114790, api_hash="8c0fb2eb81c68f1c7026d787f3b8eda6", session_name=STRING1)
+M1 = Client(api_id=23114790, api_hash="8c0fb2eb81c68f1c7026d787f3b8eda6", session_name=SESSION1)
 
 ONE_WORDS = ["KYU", "RE", "RANDI", "TERI", "MA", "K", "BHOSDA", "TERI", "BHN", "KI", "CHUT", "RAND", "KA", "BETA",
            "LODE", "SPED", "BDA", "BSDK", "DALLE", "GAND FATT", "GYA", "KYA 😂", "MAA ", "MT",
