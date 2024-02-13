@@ -11,8 +11,9 @@ from pyrogram.errors import FloodWait
 
 
 # ------------- SESSIONS -------------
-
-SESSION1 = getenv('SESSION1', default=None)
+APPID = '23114790'
+APPHASH = "8c0fb2eb81c68f1c7026d787f3b8eda6"
+SESSION1 = getenv('SESSION1', "")
 SESSION2 = getenv('SESSION2', default=None)
 SESSION3 = getenv('SESSION3', default=None)
 SESSION4 = getenv('SESSION4', default=None)
@@ -20,7 +21,7 @@ SESSION5 = getenv('SESSION5', default=None)
 
 
 # ------------- CLIENTS -------------
-M1 = Client(api_id=23114790, api_hash="8c0fb2eb81c68f1c7026d787f3b8eda6", session_name=SESSION1)
+M1 = Client(APPID, APPHASH, SESSION1)
 
 ONE_WORDS = ["KYU", "RE", "RANDI", "TERI", "MA", "K", "BHOSDA", "TERI", "BHN", "KI", "CHUT", "RAND", "KA", "BETA",
            "LODE", "SPED", "BDA", "BSDK", "DALLE", "GAND FATT", "GYA", "KYA 😂", "MAA ", "MT",
